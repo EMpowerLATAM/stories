@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>EMpower · Stories of Change</title>
+<meta name="description" content="Stories shared by EMpower's grantee partners about the changes young people are leading in their lives and communities.">
+<meta property="og:title" content="EMpower · Stories of Change">
+<meta property="og:description" content="Young people, in their own words.">
+<meta property="og:image" content="assets/img/logo-empower-color.png">
+<link rel="icon" href="assets/img/logo-empower-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=League+Gothic&family=Noto+Sans+Devanagari:wght@400;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip" href="#stories" data-i18n="skip">Skip to content</a>
+
+<header class="top">
+  <div class="top-in">
+    <a href="#top"><img src="assets/img/logo-empower.png" alt="EMpower"></a>
+    <nav>
+      <a class="cue-link" href="#stories" data-i18n="cue">Stories ↓</a>
+      <div class="lang-switch" id="langs" role="group" aria-label="Language"></div>
+      <select class="lang-select" id="lang-select" aria-label="Language"></select>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-in">
+    <div class="intro">
+      <span class="kicker" data-i18n="kicker">EMpower · Stories of change</span>
+      <h1><span data-i18n="h1a">Young people,</span> <span class="hl" data-i18n="h1b">in their own words.</span></h1>
+      <p data-i18n="intro"></p>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="map-wrap" id="map-wrap">
+      <svg id="map" role="img" aria-label="Map of countries with stories"></svg>
+      <div class="map-tip" id="tip"></div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#stories" data-i18n="cue">Stories ↓</a>
+</section>
+
+<main class="stories" id="stories">
+  <div class="wrap">
+    <div class="s-head">
+      <h2><span data-i18n="sec_a">Explore the</span> <span class="hl" data-i18n="sec_b">stories</span></h2>
+      <p data-i18n="sec_sub"></p>
+    </div>
+    <p class="notice" id="preview" data-i18n="preview" hidden></p>
+    <div class="filters" role="search">
+      <div class="frow">
+        <div class="field search"><label for="q" data-i18n="search_label">Search</label><input id="q" type="search" autocomplete="off"></div>
+        <div class="field"><label for="f-region" data-i18n="f_region">Region</label><select id="f-region" data-key="region"></select></div>
+        <div class="field"><label for="f-country" data-i18n="f_country">Country</label><select id="f-country" data-key="country"></select></div>
+        <div class="field"><label for="f-year" data-i18n="f_year">Year</label><select id="f-year" data-key="year"></select></div>
+        <div class="field"><label for="f-type" data-i18n="f_type">Story type</label><select id="f-type" data-key="type"></select></div>
+      </div>
+      <div>
+        <div class="flabel" id="theme-label" data-i18n="f_theme">Theme</div>
+        <div class="chips" id="dims" role="group" aria-labelledby="theme-label"></div>
+        <div class="chips" id="subs"></div>
+      </div>
+    </div>
+    <div class="bar"><span class="count" id="count" aria-live="polite"></span><button class="clear" id="clear" type="button" data-i18n="clear">Clear filters</button></div>
+    <div class="grid" id="grid"><p class="empty" data-i18n="loading">Loading stories…</p></div>
+    <div class="more-wrap"><button class="btn" id="more" type="button" data-i18n="more" hidden>Show more stories</button></div>
+  </div>
+</main>
+
+<dialog id="dlg" aria-labelledby="dlg-title"><div class="dlg" id="dlg-body"></div></dialog>
+
+<footer class="site-footer">
+  <div class="f-in">
+    <div class="f-main">
+      <div>
+        <a href="#top" class="f-logo"><img src="assets/img/logo-empower.png" alt="EMpower – The Emerging Markets Foundation"></a>
+        <div class="f-follow" data-i18n="follow">Follow us</div>
+        <div class="f-soc">
+          <a data-href="url_web" href="https://empowerweb.org" target="_blank" rel="noopener" aria-label="empowerweb.org" title="empowerweb.org"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></a>
+          <a data-href="url_linkedin" href="https://www.linkedin.com/company/empowerweb/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a data-href="url_youtube" href="https://www.youtube.com/@empower-theemergingmarkets7922" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+          <a data-href="url_instagram" href="https://www.instagram.com/empower_foundation/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h3 data-i18n="ftitle">EMpower – The Emerging Markets Foundation</h3>
+        <p data-i18n="fp1"></p>
+        <p data-i18n="fp2"></p>
+      </div>
+    </div>
+    <div class="f-bottom" data-i18n="fcopy">© 2026 EMpower – The Emerging Markets Foundation</div>
+  </div>
+</footer>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
