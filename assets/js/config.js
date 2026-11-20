@@ -5,7 +5,7 @@ window.STORIES_CONFIG = {
   sheetId: "1FNmG1TWTz5iPT0aQoT1MBKHYSqN3YtA1v7YEGAkBEpA",
 
   // Name of the tab that holds the stories.
-  sheetName: "Sheet1",
+  sheetName: "Stories",
 
   // Name of the tab with all the site texts (titles, numbers, labels, links) in every language.
   // If it is missing or cannot be read, the site uses the default texts in assets/js/i18n.js.
